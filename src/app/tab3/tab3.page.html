@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-button>
+				<ion-icon name="logo-tableau"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+    <ion-item  lines="none">
+      <h6 style="color:black; font-weight:bolder" >
+        RECENT NOTIFICATIONS
+      </h6>
+    </ion-item>
+		<ion-buttons slot="end">
+			<ion-button class="bordered" fill="solid" color="light">
+				<ion-icon color="custom" name="notifications"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+  
+    <ion-item *ngFor='let x of notifs '>
+      <ion-avatar slot="start">
+        <img src="../../assets/alarm.svg">
+      </ion-avatar>
+      <ion-label class="ion-text-wrap">
+        <h2>#{{x.id}}</h2>
+        <h3 style="text-transform: uppercase;">{{x.title}}</h3>
+        <p>{{x.body}}</p>
+      </ion-label>
+    </ion-item>
+
+    
+  </ion-list>
+</ion-content>

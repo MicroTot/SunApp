@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-button>
+				<ion-icon name="cash"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+    <ion-item  lines="none">
+      <h6 style="color:black; font-weight:bolder" >
+        MEMBER CONTRIBUTIONS
+      </h6>
+    </ion-item>
+		<ion-buttons slot="end">
+			<ion-button class="bordered" fill="solid" color="light">
+				<ion-icon color="custom" name="logo-usd"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-searchbar showCancelButton="focus" 
+  cancelButtonText="Custom Cancel"></ion-searchbar>
+
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col>MEMBER</ion-col>
+      <!-- <ion-col>HOUSE</ion-col> -->
+      <ion-col>STATUS</ion-col>
+      <ion-col>AMOUNT</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let x of conts; index as i">
+      <!-- <ion-col>{{ i + 1 }}</ion-col> -->
+      <ion-col style="color: rgb(114, 113, 113); text-transform: uppercase;">{{x.member}}</ion-col>
+      <!-- <ion-col>{{ x.member.house_number}}</ion-col> -->
+      <ion-col style="color: rgb(65, 60, 60); text-transform: uppercase;">{{ x.status}}</ion-col>
+      <ion-col style=" text-transform: uppercase;">{{ x.contribution}}</ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+  <ion-item lines="none">
+    <ion-button color="custom" size="small" slot="end">
+      <ion-icon  src="../../assets/pdf.svg"></ion-icon> PRINT PDF
+    </ion-button>
+  </ion-item>
+</ion-content>

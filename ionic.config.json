@@ -1,0 +1,7 @@
+{
+  "name": "SunApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
