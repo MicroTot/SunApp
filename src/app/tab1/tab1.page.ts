@@ -27,7 +27,6 @@ collected: any=[];
     this.getCollected();
   }
  
-
   getData(){
     return this.api.getExpenditure().subscribe(data => {
       console.log("API DATA:", data);
@@ -39,8 +38,6 @@ collected: any=[];
         console.log("API DATA:", data);
         this.collected = data;
       })
-  
     }
-
   }
 
